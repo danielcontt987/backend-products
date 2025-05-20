@@ -16,7 +16,11 @@ async function connectDB(){
         
     }
 }
+
 connectDB()
 const server = express();
+
+server.use(express.json())
 server.use('/api/products', router)
+
 export default server
